@@ -1,40 +1,34 @@
 package strategy
 
+import strategy.ducks.Duck
+import strategy.ducks.RedDuck
+import strategy.ducks.RubberDuck
+
 // we have a game of ducks in which we have different types of ducks
 // suppose there is a common class for ducks which contains all common functionalities
 
+//now requirement came to add feature of fly for ducks
+
 fun main (args:Array<String>){
-    val redDuck=RedDuck()
-    redDuck.apply {
-     quack()
-     swim()
-    }
+    val redDuck:Duck= RedDuck()
+        callActions(redDuck)
+    // when i create rubber duck and call its actions i see the problem then
+     val rubberDuck:Duck =  RubberDuck()
+    callActions(rubberDuck)
 }
-abstract class Duck {
-
-    fun quack(){
-        println("quack!! quack!!")
-    }
-
-    fun swim(){
-        println("swimming.. like a charm :)")
-    }
-
-    // each duck type will have its own display way
-    abstract  fun display()
-
-
-    // other methods
-}
-
-class RedDuck: Duck() {
-    override fun display() {
-        println(" I am Red Duck")
+fun callActions(duckType: Duck){
+    duckType.apply {
+        display()
+        quack()
+        swim()
+        fly()
     }
 }
 
-class BlackDuck: Duck() {
-    override fun display() {
-        println(" I am Black Duck")
-    }
-}
+
+// the problem with adding  new feature in the base class is new feature cant be implemented to all subclasses like rubberDuck here
+// we can solve this by making overriding the fly function in  rubberDuck class like we are doing for the quack ()
+// but what will happen when we will hack woodDuck in future  that doesnt fly or make sound
+// lets do it in 2nd way
+
+
