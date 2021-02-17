@@ -1,8 +1,6 @@
-package strategy
+package strategy.firstway
 
-import strategy.ducks.Duck
-import strategy.ducks.RedDuck
-import strategy.ducks.RubberDuck
+
 
 // we have a game of ducks in which we have different types of ducks
 // suppose there is a common class for ducks which contains all common functionalities
@@ -10,19 +8,11 @@ import strategy.ducks.RubberDuck
 //now requirement came to add feature of fly for ducks
 
 fun main (args:Array<String>){
-    val redDuck:Duck= RedDuck()
+    val redDuck: Duck = RedDuck()
         callActions(redDuck)
     // when i create rubber duck and call its actions i see the problem then
-     val rubberDuck:Duck =  RubberDuck()
+     val rubberDuck: Duck =  RubberDuck()
     callActions(rubberDuck)
-}
-fun callActions(duckType: Duck){
-    duckType.apply {
-        display()
-        quack()
-        swim()
-        fly()
-    }
 }
 
 

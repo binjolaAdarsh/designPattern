@@ -1,4 +1,5 @@
-package strategy.ducks
+package strategy.firstway
+
 
 abstract class Duck {
 
@@ -38,5 +39,13 @@ class RubberDuck : Duck() {
     }
     override fun display() {
         println(" I am Rubber Duck")
+    }
+}
+fun callActions(duckType: Duck){
+    duckType.apply {
+        display()
+        quack()
+        swim()
+        fly()
     }
 }
