@@ -1,6 +1,4 @@
-package firstWay.displays
-
-import secondWay.displays.GetWeatherData
+package secondWay.displays
 
 interface GetWeatherData {
     fun recentTemperature(): Float

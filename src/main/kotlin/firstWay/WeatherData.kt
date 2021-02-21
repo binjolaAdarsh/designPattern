@@ -1,6 +1,9 @@
 package firstWay
 
 import firstWay.displays.*
+import secondWay.displays.GetWeatherData
+import secondWay.displays.StatisticsDisplay
+import secondWay.displays.ThirdPartyWeatherService
 
 /*
 We have weatherData class
