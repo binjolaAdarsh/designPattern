@@ -2,10 +2,11 @@ package finalway
 
 
 // using decorator pattern
+// we can add new functionality into existing object without changing it
 
 fun main(args: Array<String>) {
 
-    var milkTea=MilkTea() // normal tea with milk
+    val milkTea=MilkTea() // normal tea with milk
     println("${milkTea.description} , ${milkTea.cost()}Rs")
 
     // add topping

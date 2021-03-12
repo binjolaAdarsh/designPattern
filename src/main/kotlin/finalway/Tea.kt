@@ -2,7 +2,7 @@ package finalway
 
 abstract class Tea {
    open var description = "unknown chai"
-
+    // every child will implement and create its logic
     abstract  fun cost():Int
 }
 
@@ -11,7 +11,7 @@ class BlackTea() : Tea() {
         description = "Black Tea"
     }
     override fun cost(): Int {
-        return 5
+        return 5    // simply return black tea cost
     }
 }
 
@@ -20,6 +20,6 @@ class MilkTea() : Tea() {
         description = "Milk Tea"
     }
     override fun cost(): Int {
-        return 7
+        return 7   // simply return milk tea cost
     }
 }

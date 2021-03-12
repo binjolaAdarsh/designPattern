@@ -3,7 +3,7 @@ import secondWay.MilkTea
 // using inheritance
 
 fun main(args: Array<String>) {
-    var milkTea= MilkTea()
+    val milkTea= MilkTea()
     println("${milkTea.description} , ${milkTea.cost()}Rs")
     milkTea.hasHoney =true
     milkTea.hasGinger =true
