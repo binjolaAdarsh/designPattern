@@ -1,12 +1,15 @@
 package factory.firstway
 
+/**
+ * there can be multiple type of pizzas so creating the abstract class and all pizaa type will inherit pizza class
+ */
 abstract  class  Pizza {
     abstract  fun prepare()
     abstract  fun bake()
     abstract  fun cut()
     abstract  fun box()
 }
-
+// creating cheeze pizza
 class CheezePizza: Pizza() {
     override fun prepare() {
         println("prepare:cheezePizza")

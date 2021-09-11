@@ -3,6 +3,8 @@ package factory.secondway
 import factory.firstway.Pizza
 
 class IndiaPizzaStore :PizzaStore(){
+
+    // this is indian type of pizza store so create indian type of pizza and return it
     override fun createPizza(type: String): Pizza {
        if(type == "cheese"){
            return IndiaCheezePizza()

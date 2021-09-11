@@ -5,6 +5,9 @@ fun main (args:Array<String>){
     pizzaStore.orderPizza("cheese")
 
 }
+
+// shop from where we will order pizza
+// this will  create a pizza from factory
 class PizzaStore(private val factory: SimplePizzaFactory){
     fun orderPizza(type:String){
        val pizza =  factory.createPizza(type)
